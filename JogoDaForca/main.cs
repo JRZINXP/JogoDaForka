@@ -19,10 +19,10 @@ namespace JogoDaForca
             valores["País"] = new List<string> { "brasil", "canada", "mexico", "argentina", "japao", "china", "italia", "alemanha", "franca", "egito" };
             valores["Objecto"] = new List<string> { "cadeira", "mesa", "livro", "laptop", "garrafa", "chave", "copo", "telefone", "garfo", "colher" };
             valores["Fruta"] = new List<string> { "banana", "manga", "uva", "morango", "abacaxi", "pera", "melao", "kiwi", "ameixa", "goiaba" };
-            valores["Animais"] = new  List<String>{"gato", "cachorro", "leao", "tigre", "elefante","coelho", "jacare", "papagaio", "coruja", "pinguim"};
-            valores["Filmes"] = new List<String>{"avatar", "titanic", "vingadores", "rocky", "aladdin","matrix", "shrek", "jumper", "madmax", "jumanji"};
-            valores["Cores"] = new List<String>{"vermelho", "azul", "amarelo", "verde", "roxo","preto", "branco", "cinza", "marrom", "rosa"};
-            valores["Instrumentos"] = new List<String>{"violao", "guitarra", "piano", "bateria", "flauta","violino", "teclado", "saxofone", "trompete", "flauta"};
+            valores["Animal"] = new  List<String>{"gato", "cachorro", "leao", "tigre", "elefante","coelho", "jacare", "papagaio", "coruja", "pinguim"};
+            valores["Filme"] = new List<String>{"avatar", "titanic", "vingadores", "rocky", "aladdin","matrix", "shrek", "jumper", "madmax", "jumanji"};
+            valores["Cor"] = new List<String>{"vermelho", "azul", "amarelo", "verde", "roxo","preto", "branco", "cinza", "marrom", "rosa"};
+            valores["Instrumento"] = new List<String>{"violao", "guitarra", "piano", "bateria", "flauta","violino", "teclado", "saxofone", "trompete", "flauta"};
 
             //Chamar a biblioteca random
             Random rd = new Random();
