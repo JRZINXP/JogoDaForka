@@ -54,8 +54,6 @@
             this.btnR = new System.Windows.Forms.Button();
             this.btnE = new System.Windows.Forms.Button();
             this.btnW = new System.Windows.Forms.Button();
-            this.lblTeste = new System.Windows.Forms.Label();
-            this.lblTeste2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnQ
@@ -293,32 +291,12 @@
             this.btnW.Text = "W";
             this.btnW.UseVisualStyleBackColor = true;
             // 
-            // lblTeste
-            // 
-            this.lblTeste.AutoSize = true;
-            this.lblTeste.Location = new System.Drawing.Point(278, 137);
-            this.lblTeste.Name = "lblTeste";
-            this.lblTeste.Size = new System.Drawing.Size(36, 19);
-            this.lblTeste.TabIndex = 26;
-            this.lblTeste.Text = "Info";
-            // 
-            // lblTeste2
-            // 
-            this.lblTeste2.AutoSize = true;
-            this.lblTeste2.Location = new System.Drawing.Point(369, 137);
-            this.lblTeste2.Name = "lblTeste2";
-            this.lblTeste2.Size = new System.Drawing.Size(36, 19);
-            this.lblTeste2.TabIndex = 27;
-            this.lblTeste2.Text = "Info";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(889, 658);
-            this.Controls.Add(this.lblTeste2);
-            this.Controls.Add(this.lblTeste);
             this.Controls.Add(this.btnW);
             this.Controls.Add(this.btnE);
             this.Controls.Add(this.btnR);
@@ -350,7 +328,6 @@
             this.Name = "Form1";
             this.Text = "Jogo Da Forka";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -382,8 +359,6 @@
         private System.Windows.Forms.Button btnR;
         private System.Windows.Forms.Button btnE;
         private System.Windows.Forms.Button btnW;
-        private System.Windows.Forms.Label lblTeste;
-        private System.Windows.Forms.Label lblTeste2;
     }
 }
 

@@ -19,8 +19,7 @@ namespace JogoDaForca
 
         private void btnA_Click(object sender, EventArgs e)
         {
-            lblTeste2.Text = main.lista();
-            lblTeste.Text = main.chave();
+            
         }
     }
 }
