@@ -12,75 +12,52 @@ namespace JogoDaForca
 {
     public partial class Form1 : Form
     {
-        static Label[] labels = new Label[10];
+        private JogoForca jogo;
+        static List<Label> labels = new List<Label>();
+
         public Form1()
         {
             InitializeComponent();
-            labels[0] = label1;
-            labels[1] = label2;
-            labels[2] = label3;
-            labels[3] = label4;
-            labels[4] = label5;
-            labels[5] = label6;
-            labels[6] = label7;
-            labels[7] = label8;
-            labels[8] = label9;
-            labels[9] = label10;
-        }
-
-        private void btnA_Click(object sender, EventArgs e)
-        {
-            
+            labels.AddRange(new[] { label0, label1, label2, label3, label4, label5, label6, label7, label8, label9 });
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            iniciar();
-            main.lista();//Inicializar a lista para poder gerar a chave
-            lblChaveSort.Text = main.chave();
+            jogo = new JogoForca();
+
+            lblChaveSort.Text = jogo.GetCategoria();
+            lblTeste3.Text = jogo.GetPalavra(); // Remover depois (é "debug")
+
+            AtualizarInterface();
         }
 
-        
-        public void iniciar()
+        private void AtualizarInterface()
         {
-            int tamanho = main.tamanho();
-            if (tamanho == 4) { 
-                label1.Visible = false;
-                label2.Visible = false;
-                label3.Visible = false;
-                label8.Visible = false;
-                label9.Visible = false;
-                label10.Visible = false;
-            }
-            else if (tamanho == 5){
-                label1.Visible = false;
-                label2.Visible = false;
-                label8.Visible = false;
-                label9.Visible = false;
-                label10.Visible = false;
-            }
-            else if (tamanho == 6)
+            int tamanho = jogo.GetTamanho();
+
+            for (int i = 0; i < labels.Count; i++)
             {
-                label1.Visible = false;
-                label2.Visible = false;
-                label9.Visible = false;
-                label10.Visible = false;
-            }
-            else if (tamanho == 7)
-            {
-                label1.Visible = false;
-                label9.Visible = false;
-                label10.Visible = false;
-            }
-            else if (tamanho == 8)
-            {
-                label1.Visible = false;
-                label10.Visible = false;
-            }
-            else if (tamanho == 9)
-            {
-                label10.Visible = false;
+                if (i < tamanho)
+                {
+                    labels[i].Visible = true;
+                    labels[i].Text = jogo.LetraEstaRevelada(i) ? jogo.GetLetra(i).ToString() : "_";
+                }
+                else
+                {
+                    labels[i].Visible = false;
+                }
             }
         }
+
+        private void letra_Click(object sender, EventArgs e)
+        {
+            Button botao = sender as Button;
+            char letra = botao.Text.ToLower()[0];
+
+            jogo.VerificarLetra(letra);
+            AtualizarInterface();
+            botao.Enabled = false;
+        }
     }
+
 }
